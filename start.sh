@@ -95,8 +95,12 @@ else
     cd $DIR
 	git pull origin $branch
 	echo "$DIR created."
-	rm -rf .git && grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g" && grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
+	rm -rf .git
+    grep -rl "startpilot" ./* -R | xargs sed -i '' "s/startpilot/${PWD##*/}/g"
+    grep -rl "Startpilot" ./* -R | xargs sed -i '' "s/Startpilot/${PWD##*/}/"
+	grep -rl "vendor" ./* -R | xargs sed -i '' "s/vendor/${vendor##*/}/g"
 	grep -rl "Vendor" ./* -R | xargs sed -i '' "s/Vendor/${vendor##*/}/g"
+	grep -rl "yourext" ./* -R | xargs sed -i '' "s/yourext/${package##*/}/g"
 	grep -rl "Yourext" ./* -R | xargs sed -i '' "s/Yourext/${package##*/}/g"
 	pwd
 	cd Resources/Build/
