@@ -1,9 +1,10 @@
 {
-	"name": "Vendor/Yourext",
+	"name": "vendor/yourext",
 	"description": "TYPO3 Provider Extension",
 	"type": "typo3-cms-extension",
+	"version": "1.0.0",
 	"require": {
-		"typo3/cms-frontend": "^10"
+		"typo3/cms-frontend": "^11"
 	},
 	"authors": [
 		{
@@ -24,9 +25,12 @@
 			"Vendor\\Yourext\\": "Classes"
 		}
 	},
+	"replace": {
+		"vendor/yourext": "self.version"
+	},
 	"extra": {
-		"branch-alias": {
-			"dev-master": "1.0.0"
+		"typo3/cms": {
+			"extension-key": "startpilot"
 		}
 	}
 }

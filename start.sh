@@ -90,7 +90,7 @@ else
     printf ${NC}
 
     echo ${DIR}
-	git clone https://github.com/Startpiloten/startpilot.git $DIR --depth=1
+	git clone https://github.com/kubilaymelnikov/startpilot.git $DIR --depth=1
 	echo "change origin"
     cd $DIR
 	git pull origin $branch
