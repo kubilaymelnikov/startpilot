@@ -1,5 +1,5 @@
 
-# Startpilot – a basic TYPO3 provider extension 
+# Startpilot – a basic TYPO3 provider extension
 
 This documentation is written for version 1.0.4 of startpilot.
 
@@ -23,7 +23,7 @@ System requirements:
 - npm 5.3.0+ | 6.0.1+
 - TYPO3 9 LTS (PHP 7.2)
 
-In order to get your `startpilot` extension running you need TYPO3 to be running. If you wonder how to get started with TYPO3 you can checkout the [official installation guide](https://docs.typo3.org/typo3cms/InstallationGuide/). 
+In order to get your `startpilot` extension running you need TYPO3 to be running. If you wonder how to get started with TYPO3 you can checkout the [official installation guide](https://docs.typo3.org/typo3cms/InstallationGuide/).
 
 
 
@@ -36,10 +36,10 @@ In order to get your `startpilot` extension running you need TYPO3 to be running
 You can use the following command to clone `startpilot`. Simply open the CLI of your choice and paste the command down below. By editing the `--extname startpilot` parameter to `--extname mycustomproviderext`  your provider extension gets put in a directory called `mycustomproviderext`.
 
 ```shell
-curl https://raw.githubusercontent.com/Startpiloten/startpilot/master/start.sh > start.sh && sh start.sh --extname startpilot --branch master --vendor Startpiloten --package Startpilot
+curl https://raw.githubusercontent.com/kubilaymelnikov/startpilot/master/start.sh > start.sh && sh start.sh --extname startpilot --branch master --vendor Startpiloten --package Startpilot
 ```
 
-Keep in mind, that we unfortunately This command will put your extension in the `packages` directory in your project root. 
+Keep in mind, that we unfortunately This command will put your extension in the `packages` directory in your project root.
 
 
 
@@ -56,7 +56,7 @@ Next to install it via composer we have to add this package to the composer.json
   ],
  ```
 
-and execute `composer require mycustomproviderext`. 
+and execute `composer require mycustomproviderext`.
 
 
 
@@ -70,9 +70,9 @@ The next thing we have to do now, is to tell TYPO3 to install the new providerex
 
 For the last step we have to include the page configuration of our extension in TYPO3. Simply head to your backend, open template module, edit the whole template record and add „mycustomproviderext“ under the includes tab.
 
-We assume you are either executing these steps in a freshly setup TYPO3 9 or familiar with the quirks of including extension templates and the order in which you want to include the templates. 
+We assume you are either executing these steps in a freshly setup TYPO3 9 or familiar with the quirks of including extension templates and the order in which you want to include the templates.
 
-If you are executing these steps in  a new installation of TYPO3 be sure to delete or comment the page configuration provided in setup. 
+If you are executing these steps in  a new installation of TYPO3 be sure to delete or comment the page configuration provided in setup.
 
 
 
@@ -112,7 +112,7 @@ You can run the predefined npm tasks through your CLI by entering one of `webpac
 
 
 
-`webpack:build:dev` 
+`webpack:build:dev`
 
 Collects all frontend related necessary files and distributes them to the /public folder.
 
