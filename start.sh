@@ -103,11 +103,6 @@ else
 	grep -rl "yourext" ./* -R | xargs sed -i '' "s/yourext/${package##*/}/g"
 	grep -rl "Yourext" ./* -R | xargs sed -i '' "s/Yourext/${package##*/}/g"
 	pwd
-	cd Resources/Build/
-    nvm use
-    npm install -g yarn
-    yarn install
-    yarn run webpack:build:live
 	printf ${GREEN}
 	echo
 	echo "Your extension is now in $DIR."
